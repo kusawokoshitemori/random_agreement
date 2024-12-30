@@ -1,9 +1,5 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+agreement_list = ["うんうん","そうだね","なるほどね","まあその意見もあるよね","ふーん","なかなかやるね","あー","ところでシメジとギャンブルどっちが興味ある？","へー","すごいね","さすが","知らなかった","いいね","面白いね","楽しそう","びっくりした","分かる気がする","うそ!?","マジで","やば","なるほどねー","うける","そうなんだー","詳しく聞かせて","どうして？","なんで？","続きが気になる","それから？","か~ら~の~","やっぱり？","こわいね","嬉しいね","なかなかないよね","貴重な経験だね","(無視)","何て言った？","つまりそれは○○ってこと？","本当に？","いいの？","凄いじゃん","そっかそっか","あー、なるほどね","うーん、なるほどね","え、そうなの？","それはそうかも","それはいい考えだね","マジで興味深いね","それな","せやな","それで？","それ面白っ","ちょっと意外だわ","勉強になるわ","やっぱ君賢いね","まだこの話続く？","それってどういうこと？","まあね","うける～","確かに","ぬん","意外だね","ホントそれ","最高だね","分かるわ～","ほうほう","わかりみ深い","な～る","それもあるよね","急にどうした？","それ共感するわ","それ他の人も言ってた","言いそう","考えたことなかったわ","それ本当？","新しい視点だね","納得したわ","そうだよね","深いね","不快だね","それも一理あるね","その通りだと思う","想定外だわ","それか～","ちょっとごめん。もしもし？","不思議だね","本当に？","そんなこともあるんだね","説得力あるね？","君タモリさんに似ているってよく言われない？"]
+
+agreement_list.each do |agreement|
+    Agreement.create(content: agreement)
+end
